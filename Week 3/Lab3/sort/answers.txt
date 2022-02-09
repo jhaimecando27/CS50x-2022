@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: I came up with this conclusion because of the result I got in sorted list of data. I found out that the time for the program to be executed significantly decreases, about more than 30 seconds apart compared to the rest of the list of data in my tests. That concludes, that it has a very similar behavior with bubble sort in terms of best case scenario, big omega n.
+
+sort2 uses: merge sort
+
+How do you know?: I came up with this conclusion because it is the fastest of the three. On the top of that, all the results seems to be constant, in terms of time. Also, it has a very familiar behavior with merge sort, which the lower and upper bound have the same running time.
+
+sort3 uses: selection sort
+
+How do you know?: In my understanding, in terms of upper and lower bound, selection sort is somehow similar with bubble sort. The only thing that make the bubble sort different in terms of lower bound, because in selection sort, the upper and lower bound is the same.

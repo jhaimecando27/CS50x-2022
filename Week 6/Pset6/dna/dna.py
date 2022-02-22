@@ -1,20 +1,50 @@
-import csv
-import sys
+from csv import DictReader, reader
+from sys import argv
 
 
 def main():
 
-    # TODO: Check for command-line usage
+    # Check for command-line usage
+    if len(argv) != 3:
+        print("Usage: python dna.py DATABASE SEQUENCE")
 
-    # TODO: Read database file into a variable
+    # Read database file into a variable
+    db_path = argv[1]
+    with open(db_path, 'r') as db_file:
+        db_reader = reader(db_file)
+        STRs = next(db_reader)[1:]
+
+    with open(db_path, 'r') as db_file:
+        db_reader = DictReader(db_file)
+        dna_dict = list(db_reader)
     
-    # TODO: Read DNA sequence file into a variable
+    #  Read DNA sequence file into a variable
+    seq_path = argv[2]
+    with open(seq_path, 'r') as seq_file:
+        seq = seq_file.read()
 
-    # TODO: Find longest match of each STR in DNA sequence
+    # Find longest match of each STR in DNA sequence
+    seq_data = {}
+    for STR in STRs:
+        seq_data[STR] = longest_match(seq, STR)
 
-    # TODO: Check database for matching profiles
+    # Check database for matching profiles
+    for dna in dna_dict:
+        # Count all STR that match
+        STR_count = 0
 
-    return
+        # Iterate all same STR in STRs
+        for STR in STRs:
+            if int(dna[STR]) == seq_data[STR]:
+                STR_count += 1
+        
+        # Display if match found
+        if STR_count == len(STRs):
+            print(dna['name'])
+            exit(0)
+
+    print("No match")
+    exit(1)
 
 
 def longest_match(sequence, subsequence):

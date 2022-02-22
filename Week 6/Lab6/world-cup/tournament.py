@@ -4,6 +4,7 @@ import csv
 import sys
 import random
 
+
 # Number of simluations to run
 N = 1000
 
@@ -19,13 +20,14 @@ def main():
     filename = sys.argv[1]
     with open(filename) as f:
         reader = csv.DictReader(f)
-        for team in reader:
-            team["rating"] = int(team["rating"])
-            teams.append(team)
+        for row in reader:
+            new_team = {'team': row['team'], 'rating': int(row['rating'])}
+            teams.append(new_team)
 
     counts = {}
     # Simulate N tournaments and keep track of win counts
-    for i in range(N):
+
+    for _ in range(N):
         winner = simulate_tournament(teams)
         if winner in counts:
             counts[winner] += 1

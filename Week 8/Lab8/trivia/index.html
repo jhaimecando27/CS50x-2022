@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Wait for HTML document to completely loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                
+                // Part 1 - Correct
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.getElementById('result1').innerHTML = "Correct!";
+                });
+                
+                // Part 1 - Incorrect
+                let incorrect = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrect.length; i++) {
+                    incorrect[i].addEventListener('click', function() {
+                        incorrect[i].style.backgroundColor = 'red';
+                        document.getElementById('result1').innerHTML = "incorrect";
+                    });
+                }
+                
+                // Part 2
+                let input = document.querySelector('input');
+                document.querySelector('.check').addEventListener('click', function() {
+                    if (input.value == 'Document Object Model') {
+                        input.style.backgroundColor = 'green';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- Add multiple choice question here -->
+                <h3>What does "HTML" stands for?</h3>
+                
+                <p id="result1"></p>
+                
+                <button class="incorrect">Home Tool Markup Language</button>
+                <button class="incorrect">How Text Mockup Language</button>
+                <button class="correct">Hyper Text Markup Language</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- Add free response question here -->
+                <h3>What does "DOM" Stands for?</h3>
+                
+                <p id="result2"></p>
+
+                <input type="text">
+                <button class="check">Check</button>
+            </div>
+        </div>
+    </body>
+</html>

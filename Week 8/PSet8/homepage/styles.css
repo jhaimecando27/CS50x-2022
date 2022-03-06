@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Lato:wght@300;400&family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
+
+/* ========== Body Starts ========== */
+body, header {
+    background-color: #3F175B !important;
+}
+/* ========== Body Ends ========== */
+
+
+/* ========== Header Starts ========== */
+.navbar-brand, .navbar-nav .btn {
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 3rem;
+    cursor: pointer;
+}
+
+.navbar-nav .btn {
+    background-color: #FF7200;
+    border: none;
+    padding: .4em 1.5em;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 2em;
+    transition: 0.4s ease-out;
+}
+
+.navbar-nav .btn:hover {
+    color: #3F175B;
+    background-color: #ff7300c5 !important;
+}
+
+.navbar-nav .btn:active {
+    transform: scale(0.8) translateY(10%);
+}
+
+.nav-link {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: white !important;
+    padding: 0;
+    margin-right: 2.5rem;
+}
+
+.nav-link:hover, .active, .navbar-brand:hover {
+    color: #FF7200 !important;
+    transition: 0.5s ease-out;
+}
+/* ========== Header Ends ========== */
+
+
+/* ========== Main Starts ========== */
+main {
+    color: white;
+}
+
+.content, .my-content {
+    font-family: 'Abhaya Libre', serif;
+}
+
+
+
+.content h1 {
+    font-size: 10rem;
+}
+
+.content h3 {
+    font-size: 7rem;
+    border-bottom: 5px solid #3F175B;
+}
+
+.content h4 {
+    padding-left: 1rem;
+    border-left: 5px solid #FF7200;
+}
+
+.content h5, .content h4 {
+    font-size: 4rem;
+    font-size: 4rem;
+}
+
+.content p {
+    font-size: 4rem;
+}
+
+.content ul {
+    list-style-type: none;
+    margin-bottom: 50px;
+}
+
+.details {
+    font-size: 2rem;
+}
+
+.content .about {
+    font-size: 2rem;
+    text-align: justify;
+    padding: 0 1rem;
+    border-left: 5px solid #FF7200;
+}
+
+.content h1:hover, .content p:hover, .content h5:hover, .content h3:hover, .content h4:hover, .details:hover {
+    color: #FF7200 !important;
+    transition: 0.5s ease-out;
+}
+
+.btn-color {
+    background-color: #FF7200;
+}
+
+.btn-color:hover {
+    background-color: #ff7300a4;
+}
+
+.my-form {
+    font-size: 2rem;
+}
+
+.my-form button {
+    font-size: 1.5rem;
+}
+
+label {
+    padding-left: 10px;
+    border-left: 5px solid #3F175B;
+}
+
+.form-control:focus {
+    outline: none !important;
+    border:2px solid #FF7200;
+    box-shadow: 0 0 10px #FF7200;
+  }
+  
+/* ========== Main Ends ========== */
+
+
+/* ========== Footer Starts ========== */
+.wave {
+    position: absolute;
+    bottom: 3.8rem;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 197px;
+}
+
+.shape-fill {
+    fill: #FF7200;
+}
+
+footer {
+    background-color: #FF7200;
+    color: #3F175B;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    transition: width 0.5s ease-out;
+    color: #3F175B;
+}
+/* ========== Footer Ends ========== */

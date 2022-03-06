@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="./styles.css" rel="stylesheet">
+    <title>My Webpage</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="container-fluid fixed-top">
+
+        <!-- Nav Start -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+
+                <!-- Logo Content -->
+                <a class="navbar-brand" id="toggle">Myself</a>
+
+                <!-- Nav Menu Start -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="interests.html">Interests</a>
+                        </li>
+                        <li class="nav-item">
+                            <form action="contact.html">
+                                <button class="btn">Contact</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Nav Menu End -->
+
+            </div>
+        </nav>
+        <!-- Nav End -->
+
+    </header>
+    <!-- Header End -->
+
+    <!-- Main Start -->
+    <main class="container">
+        <section class="d-flex align-items-center justify-content-center vh-100">
+            <div class="content container-fluid">
+                <h3 class="text-center" id="title">Contact</h3>
+                <form onsubmit="messageSent()" class="row g-3 my-form">
+                    <div class="col-12 col-lg-6">
+                        <label for="firstname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" required>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <label for="lastname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="emailInfo" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="emailInfo" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="comments" class="form-label">Message</label>
+                        <textarea id="comments" rows="3" class="form-control"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-color">Send</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Main End -->
+
+
+
+    <!-- Footer Start -->
+    <footer class="container-fluid page-footer lead fixed-bottom">
+
+        <!-- Wave Start -->
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+        <!-- Wave End -->
+
+        <!-- Footer's Content -->
+        <div class="text-center py-3">By Jhaime Cando @
+            <a href="#"> CS50x 2022</a>
+        </div>
+
+    </footer>
+    <!-- Footer Stsart -->
+
+    <script>
+        /* Alert Toggle */
+        function messageSent() {
+            alert("Message have been sent. Thank you!");
+        }
+
+        /* Color Theme Toggle */
+        const toggle = document.querySelector('#toggle');
+        const body = document.querySelector('body');
+        const main = document.querySelector('main');
+        const title = document.querySelector('#title');
+
+        document.addEventListener('DOMContentLoaded', function() {
+            toggle.addEventListener('click', function() {
+                if (body.style.backgroundColor != 'white') {
+                    body.style.setProperty('background-color', 'white', 'important');
+                    main.style.setProperty('color', 'black');
+                    title.style.setProperty('margin-bottom', '50px');
+                    title.style.setProperty('border-bottom', '5px', 'solid', '#3F175B')
+                } else {
+                    body.style.setProperty('background-color', '#3F175B', 'important');
+                    main.style.setProperty('color', 'white');
+                    title.style.setProperty('margin-bottom', '0.5rem');
+                }
+            });
+        });
+    </script>
+    <!-- Script End -->
+
+</body>
+
+</html>
